@@ -366,40 +366,54 @@ footer {
     color: #9b5d24;
     text-decoration: underline;
 }
-/* AJUSTE DEL LOGOTIPO EN CELULARES */
+
+/* PORTADA EN CELULARES */
 @media (max-width: 600px) {
 
     .portada {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        text-align: center;
-        padding: 45px 20px;
-        min-height: auto;
+        justify-content: space-between;
+        text-align: left;
+        padding: 30px 12px;
+        min-height: 420px;
+        gap: 8px;
     }
 
     .contenido-portada {
-        width: 100%;
-        max-width: 100%;
+        width: 55%;
+        max-width: 55%;
+        min-width: 0;
+    }
+
+    .contenido-portada h1 {
+        font-size: 21px;
+    }
+
+    .contenido-portada p {
+        font-size: 13px;
     }
 
     .imagen-portada {
-        width: 100%;
-        max-width: 100%;
-        flex: none;
+        width: 45%;
+        max-width: 45%;
+        flex: 0 0 45%;
         justify-content: center;
+        align-items: center;
         transform: none;
-        margin: 25px 0 0;
+        margin: 0;
     }
 
     .imagen-portada img {
-        width: 85%;
-        max-width: 300px;
+        width: 100%;
+        max-width: 180px;
         height: auto;
         margin: 0;
-        padding: 8px;
+        padding: 6px;
         box-sizing: border-box;
     }
 }
+
 /* AJUSTE DEL MENU EN CELULARES */
 @media (max-width: 600px) {
 
@@ -454,4 +468,31 @@ footer {
         border-radius: 12px;
     }
 
+}
+/* AJUSTE DEL CATALOGO EN CELULARES */
+@media (max-width: 600px) {
+
+    .presentaciones {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px 12px;
+        padding: 0 8px;
+        margin-top: 25px;
+    }
+
+    .presentaciones .producto {
+        min-width: 0;
+        padding: 12px 5px;
+        background-color: #f5e8d5;
+        border-radius: 12px;
+    }
+
+    .presentaciones h3 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .presentaciones p {
+        font-size: 14px;
+    }
 }
